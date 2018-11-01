@@ -1,22 +1,22 @@
 class UsersController < ApplicationController
   def new
-    puts 'dans new'
+    puts "...........SERVEUR : dans la méthode new du controller users"
 
     @user = User.new
 
-    puts ""
-    puts params["user"]
-    puts ""
+    puts "...........SERVEUR : "
+    puts "...........SERVEUR : params[:user] = #{params[:user]}"
+    puts "...........SERVEUR : "
   end
 
   def create
-    puts 'dans create'
+    puts "...........SERVEUR : dans la méthode create du controller users"
 
     user = User.new
 
-    puts ""
-    puts params
-    puts ""
+    puts "...........SERVEUR : "
+    puts "...........SERVEUR : params = #{params}"
+    puts "...........SERVEUR : "
 
     user.name = params[:user][:name]
     user.email = params[:user][:email]

@@ -1,0 +1,7 @@
+<br><br><h3>Gossip n°<%= @gossip_id %></h3>
+
+<p>
+	Date et heure de publication du gossip : <%= @gossip.updated_at %><br><br>
+	<%= @gossip.user.name %> a dit : <br>
+	"<%= @gossip.content %>".
+</p>

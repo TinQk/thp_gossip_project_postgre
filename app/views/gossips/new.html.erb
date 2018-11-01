@@ -1,0 +1,7 @@
+<p><u>Gossip creation</u></p>
+<%= form_for @gossip, url: {action: "create"} do |f| %>
+  <%= label_tag 'content:' %>
+  <%= f.text_field :content %>
+  <br><br>
+  <%= f.submit "Submit" %>
+<% end %>

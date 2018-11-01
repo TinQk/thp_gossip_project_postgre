@@ -1,3 +1,10 @@
-<br><br>
+<h1>Bonjour à toi, <%= $user_log.name %> ! Bienvenue sur le meilleur forum de commérage au monnnnnde !</h1>
 
-<h1>Bonjour à toi, <%=@user_name%> ! Bienvenue sur le meilleur forum de commérage au monnnnnde !</h1>
+<p><a href="/gossips/new">Créer un nouveau gossip</a></p>
+
+<p><b>Sans plus attendre, je te présente la liste des potins du moment :</b><br><br>
+
+<% @gossips.each do |gossip| %>
+	<%= gossip.user.name %> aurait dit : "<%= gossip.content %>".<br>
+  <%= link_to "Clique ici pour afficher la page de ce potin", gossips_path(gossip.id)%><br><br>
+<% end %>
