@@ -1,0 +1,2 @@
+module DynamicUserHelper
+end

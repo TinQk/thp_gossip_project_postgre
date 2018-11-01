@@ -26,8 +26,4 @@ class UsersController < ApplicationController
     @user_name = user.name
   end
 
-  def index
-    @users = User.all
-  end
-
 end
