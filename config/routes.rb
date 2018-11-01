@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/user/create', to: 'users#create'
 
   # DYNAMIC ROUTES
-  get '/user/:user_id', to: 'dynamic_user#index'
+  get '/user/:user_name', to: 'users#user_welcome'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
