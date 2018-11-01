@@ -1,14 +1,14 @@
-<h1>Controller User et méthode new</h1>
-<p>Find me in app/views/registration/new.html.erb</p>
+<h1>Connexion</h1>
 
 
-<p><u>Identification</u></p>
+
+<p><u>Entre tes identifiants</u></p>
     <%= form_for $user_log, url: {action: "log"} do |f| %>
       <%= label_tag 'email:' %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, placeholder:"Ton email" %>
       <br><br>
       <%= label_tag 'password:' %>
-      <%= f.text_field :password %>
+      <%= f.text_field :password, placeholder:"Ton mot de passe"%>
       <br><br>
       <%= f.submit "Submit" %>
     <% end %>
