@@ -5,3 +5,12 @@
 
 
 <p><a href="/user/new">Sign up</a></p>
+
+
+<h1>Liste des utilisateurs enregistrés</h1>
+  <% @users.each do |user| %>
+  	<%= user.name %> , <%= user.email %> , <%= user.password %><br>
+  <% end %>
+
+<h1>Dernier Gossip créé</h1>
+  <%= @gossip_last.content %> par <%= @gossip_last.user %>

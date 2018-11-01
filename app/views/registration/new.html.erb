@@ -3,7 +3,7 @@
 
 
 <p><u>Identification</u></p>
-    <%= form_for @user_log, url: {action: "log"} do |f| %>
+    <%= form_for $user_log, url: {action: "log"} do |f| %>
       <%= label_tag 'email:' %>
       <%= f.text_field :email %>
       <br><br>
