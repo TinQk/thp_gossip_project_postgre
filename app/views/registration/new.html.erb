@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<p><u>Identification</u></p>
-=======
 <h1>Connexion</h1>
 
 
 
 <p><u>Entre tes identifiants</u></p>
->>>>>>> d87b28354011d8e9a3ea15316dde2d53c65ffbf9
     <%= form_for $user_log, url: {action: "log"} do |f| %>
       <%= label_tag 'email:' %>
       <%= f.text_field :email, placeholder:"Ton email" %>
