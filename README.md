@@ -17,14 +17,19 @@ Giffard Josselin| @Redcozmo
 
 
 
-Bienvenue sur la page du super nouveau blog The Gossip Project. Ce site comporte plusieurs pages:
+Bienvenue sur la page du super nouveau blog The Gossip Project. Due à des contraintes de temps, et a quelques bloquages démoralisants, le projet n'est malheureusement pas complet.
 
+Plutot que de lister ce qui manque, soyons positifs, voici la liste des choses qui fonctionnent :
+* La base de donnée, qui est plutot bien foutue, avec des liens entre les tables opérationnels.
+* Les formulaires de création d'utilisateur et de connexion, qui mettent à jour la bdd.
+* La verification des identifiants, pour se connecter que si le mail/password correspondent à ceux entrés dans la bdd.
+* Les pages dynamiques.
 
-- /welcome, qui contient la liste de tous les gossips
-- /welcome/ton_petit_nom, qui, pareil, contient la liste de tous les gossips, mais personnalisé :)
-- /contact
-- /team
-- /gossips/le_numero_de_ton_gossip_préféré qui contient le détail de ton gossip préféré
+.....
+
+et voila c'est à peu près tout.
+
+Tout conseil est le bienvenue ! 
 
 
 * Le lien en prod :
