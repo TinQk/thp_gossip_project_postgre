@@ -6,9 +6,11 @@ nb_likes = 20
 
 # Create users
 nb_users.times do |i|
+  name = Faker::Science.scientist
+  email = name.tr(" ","_").concat("@").concat(Faker::Science.element).concat(".com")
   u = User.create(
-    name: "name_#{i+1}",
-    email: "email_#{i+1}",
+    name: name,
+    email: email,
     password: "password_#{i+1}"
     )
 end
@@ -16,7 +18,7 @@ end
 # Create gossips
 nb_gossips.times do |i|
   g = Gossip.create(
-    content: "blablabla_#{i+1}",
+    content: Faker::Hacker.say_something_smart,
     user: User.find(Random.new.rand(1..nb_users))
     )
 end
@@ -38,4 +40,5 @@ nb_likes.times do |i|
     )
 end
 
-#Gossip.create(author: Faker::BojackHorseman.character, content: Faker::BojackHorseman.quote)
+#Gossip.create(author: Faker::GameOfThrones.character, content: Faker::BojackHorseman.quote)
+Faker::GameOfThrones.character

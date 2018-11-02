@@ -2,6 +2,7 @@ class RegistrationController < ApplicationController
 
   def new
     $user_log = User.new
+    @user_test = User.all.first
   end
 
   def log
@@ -23,7 +24,7 @@ class RegistrationController < ApplicationController
         puts "...........SERVEUR : $user_log.id : #{$user_log.id}"
         puts "...........SERVEUR : $user_log.name : #{$user_log.name}"
         puts "...........SERVEUR : $user_log.email : #{$user_log.email}"
-        
+
         break
       end
     end
