@@ -14,25 +14,30 @@ Giffard Josselin| @Redcozmo
 
 
 #
+Le lien en prod Heroku ne fonctionne pas. Le mode classique git clone du projet est nécessaire pour la correction...
 
 
+Bienvenue sur la page du super nouveau blog The Gossip Project. Due à des contraintes de temps, et à quelques bloquages démoralisants, le projet n'est malheureusement pas complet.
 
-Bienvenue sur la page du super nouveau blog The Gossip Project. Due à des contraintes de temps, et a quelques bloquages démoralisants, le projet n'est malheureusement pas complet.
+Voici ce qui fonctionne :
 
-Plutot que de lister ce qui manque, soyons positifs, voici la liste des choses qui fonctionnent :
-* La base de donnée, qui est plutot bien foutue, avec des liens entre les tables opérationnels.
-* Les formulaires de création d'utilisateur et de connexion, qui mettent à jour la bdd.
-* La verification des identifiants, pour se connecter que si le mail/password correspondent à ceux entrés dans la bdd.
-* Les pages dynamiques.
+    1. Création d'utilisateur --> OK
+    2. Ecran de connexion avec nom de l'utilisateur et mot de passe --> OK
+    3. Un utilisateur peut détruire ses gossips (et uniquement les siens) --> NOK
+    4. Possibilité de liker les potins --> OK
+    5. Possibilité d'enlever un like déja mis --> OK
+    6. Commentaires --> NOK
+    7. Persistance de la connexion de l'utilisateur --> NOK
+    8. Lien prod Heroku --> NOK
 
 .....
 
-et voila c'est à peu près tout.
+Il est 6h50, donc bonjour et à tout de suite :-)
 
-Tout conseil est le bienvenue ! 
+Tout conseil sera le bienvenue ! 
 
 
-* Le lien en prod :
+* Le lien en prod ne marche pas :
 https://the-gossip-project-lyon.herokuapp.com/
 
 
