@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post '/user/create', to: 'users#create'
 
   # WELCOME PAGE
-  get '/user/home', to: 'users#user_welcome'
+  get '/user/moussaillon', to: 'users#user_welcome'
 
   # gossips
   get 'gossips/new', to: 'gossips#new'

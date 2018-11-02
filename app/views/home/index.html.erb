@@ -7,13 +7,16 @@
 
 <br><br>
 
-<p><a href="/user/new">Sign up</a></p>
+<p>Tu es déja inscrit ?</p>
+<p><a href="/registration/new"><button type="button" name="button">Sign in</button></a></p>
 
-
-<h1>Liste des utilisateurs enregistrés</h1>
+<br><br><br><br>
+<h1>Voici la liste des utilisateurs déjà enregistrés</h1>
+<p>Tu vois les mots de passes comme ça tu peux tester le Sign In</p>
   <% @users.each do |user| %>
   	<%= user.name %> , <%= user.email %> , <%= user.password %><br>
   <% end %>
 
-<h1>Dernier Gossip créé</h1>
+<br><br><br><br>
+<h1>Voici le dernier Gossip créé</h1>
   <%= @gossip_last.content %> par <%= @gossip_last.user.name %>
