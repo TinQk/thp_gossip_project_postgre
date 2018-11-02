@@ -1,9 +1,10 @@
-<br><br><h3>Gossip n°<%= @gossip_id %></h3>
+<br><br>
+<h3>Gossip n°<%= @gossip_id %></h3>
 
 <p>
-	Date et heure de publication du gossip : <%= @gossip.updated_at %><br><br>
-	<%= @gossip.user.name %> a dit : <br>
-	"<%= @gossip.content %>".
+	Date et heure de publication du gossip : <%= $gossip.updated_at %><br><br>
+	<%= $gossip.user.name %> a dit : <br>
+	"<%= $gossip.content %>".
 </p>
 
 <p><a href="/user/moussaillon"><button type="button" name="button">Retour</button></a></p>
@@ -11,10 +12,18 @@
 <!-- Compteur de like et likers -->
 	<% cptr_like = 0 %>
 	<% likers = [] %>
+	<% already_like = false %>
+
 	<% @likes.each do |like| %>
-		<% if like.gossip.id == @gossip.id %>
+		<% if like.gossip.id == $gossip.id %>
 			<% cptr_like += 1 %>
 			<% likers << like.user.name %>
+
+			<!-- Est-ce que le user loggé a déjà liké le gossip ? -->
+			<% if like.user.id == $user_log.id %>
+				<% already_like = true %>
+			<% end %>
+
 		<% end %>
 	<% end %>
 
@@ -28,4 +37,10 @@
 	<% end %>
 
 <br><br>
-<p><a><button type="button" name="button">Liker</button></a><t>   </t><a><button type="button" name="button">Disliker</button></a></p>
+<p>
+<% if already_like == false%>
+	<a href="likes/create"><button type="button" name="button">Liker</button></a>
+<% else %>
+	<a href="likes/destroy"><button type="button" name="button">Disliker</button></a>
+<% end %>
+</p>

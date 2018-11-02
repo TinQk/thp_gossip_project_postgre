@@ -2,7 +2,7 @@
 nb_users = 20
 nb_gossips = 30
 nb_comments = 20
-nb_likes = 20
+nb_likes = 50
 
 # Create users
 nb_users.times do |i|

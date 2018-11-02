@@ -19,6 +19,12 @@ Rails.application.routes.draw do
   post 'gossips/create', to: 'gossips#create'
   get '/gossips/:gossip_id', to: 'gossips#gossips', as: 'gossips'
 
+  # Likes
+  get 'gossips/likes/create', to: 'likes#create'
+  post 'gossips/likes/create', to: 'likes#create'
+  get 'gossips/likes/destroy', to: 'likes#destroy'
+  post 'gossips/likes/destroy', to: 'likes#destroy'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
