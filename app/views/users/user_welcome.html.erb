@@ -5,6 +5,30 @@
 <p><b>Sans plus attendre, je te présente la liste des potins du moment :</b><br><br>
 
 <% @gossips.each do |gossip| %>
-	<%= gossip.user.name %> aurait dit : "<%= gossip.content %>".<br>
-  <%= link_to "Clique ici pour afficher la page de ce potin", gossips_path(gossip.id)%><br><br>
+	<%= gossip.user.name %> a dit : "<%= gossip.content %>"
+
+<!-- Compteur de like et likers -->
+	<% cptr_like = 0 %>
+	<% likers = [] %>
+	<% @likes.each do |like| %>
+		<% if like.gossip.id == gossip.id %>
+			<% cptr_like += 1 %>
+			<% likers << like.user.name %>
+		<% end %>
+	<% end %>
+
+<!-- Affichage singulier / pluriel -->
+	<% if cptr_like == 0 %>
+	- Ce potin a été liké par <%= cptr_like %> utilisateur.
+	<% elsif cptr_like == 1 %>
+	- Ce potin a été liké par <%= cptr_like %> utilisateur : <%= likers.join(", ") %>
+	<% elsif %>
+	- Ce potin a été liké par <%= cptr_like %> utilisateurs : <%= likers.join(", ") %>
+	<% end %>
+
+<!-- Lien vers page unique gossip -->
+	<%= link_to "Clique ici pour afficher la page de ce potin", gossips_path(gossip.id)%>
+
+	<br><br>
 <% end %>
+</p>

@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   def user_welcome
     @user_name = params[:user_name]
     @gossips = Gossip.all
+    @likes = Like.all
   end
 
 

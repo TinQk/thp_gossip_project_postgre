@@ -37,3 +37,5 @@ nb_likes.times do |i|
     gossip: Gossip.find(Random.new.rand(1..nb_gossips))
     )
 end
+
+#Gossip.create(author: Faker::BojackHorseman.character, content: Faker::BojackHorseman.quote)
